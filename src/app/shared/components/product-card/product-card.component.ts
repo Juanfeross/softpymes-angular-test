@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { Product } from '../../../pages/dashboard/models/product.model';
 import { CommonModule } from '@angular/common';
+import { ProductsService } from '../../../pages/dashboard/services/products/products.service';
 
 @Component({
   selector: 'app-product-card',
@@ -11,4 +12,9 @@ import { CommonModule } from '@angular/common';
 })
 export class ProductCardComponent {
   @Input() product?: Product;
+  private _product = inject(ProductsService);
+
+  deleteProduct(id?: string) {
+    if(id) this._product.deleteProduct(id);
+  }
 }

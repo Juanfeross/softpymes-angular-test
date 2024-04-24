@@ -3,10 +3,22 @@
 .card {
   display: flex;
   flex-direction: column;
+  position: relative;
   width: 300px;
   background-color: $white;
   border-radius: .5rem;
   box-shadow: 0px 5px 10px 1px $grey-3;
+}
+
+.card-edit {
+  position: absolute;
+  cursor: pointer;
+  right: 0px;
+  margin: 1rem;
+}
+
+.card-edit:hover {
+  transform: scale(1.1);
 }
 
 .card-image {

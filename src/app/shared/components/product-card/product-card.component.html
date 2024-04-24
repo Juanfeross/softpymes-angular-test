@@ -1,4 +1,10 @@
 <div class="card">
+  <img
+    class="card-edit"
+    src="./../../../../assets/images/edit_square_FILL0_wght400_GRAD0_opsz24.png"
+    alt="Editar"
+    (click)="deleteProduct(product?.id)"
+  />
   <img class="card-image" src="{{ product?.imageUrl }}" alt="" />
   <div class="card-info">
     <p>{{ product?.name }}</p>

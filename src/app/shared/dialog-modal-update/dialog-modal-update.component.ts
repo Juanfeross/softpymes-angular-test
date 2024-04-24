@@ -5,30 +5,30 @@ import {
   Validators,
   ReactiveFormsModule,
 } from '@angular/forms';
-import { Product } from '../../models/product.model';
-import { ProductsService } from '../../services/products/products.service';
+import { Product } from '../../pages/dashboard/models/product.model';
+import { ProductsService } from '../../pages/dashboard/services/products/products.service';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { CreateForm } from '../../../../shared/models/interfaces/create-form.interface';
+import { NgIf } from '@angular/common';
+import { CreateForm } from '../models/interfaces/create-form.interface';
 
 @Component({
-  selector: 'app-dialog-modal',
+  selector: 'app-dialog-modal-update',
   standalone: true,
-  imports: [
-    MatFormFieldModule,
+  imports: [MatFormFieldModule,
     MatInputModule,
     MatIconModule,
     MatButtonModule,
     ReactiveFormsModule,
-    MatSnackBarModule,
-  ],
-  templateUrl: './dialog-modal.component.html',
-  styleUrl: './dialog-modal.component.scss',
+    NgIf,
+    MatSnackBarModule,],
+  templateUrl: './dialog-modal-update.component.html',
+  styleUrl: './dialog-modal-update.component.scss'
 })
-export class DialogModalComponent {
+export class DialogModalUpdateComponent {
   private _product = inject(ProductsService);
   private _formBuilder = inject(FormBuilder).nonNullable;
 
@@ -40,7 +40,7 @@ export class DialogModalComponent {
     quantity: this._formBuilder.control(0, Validators.required),
   });
 
-  createProduct() {
+  updateProduct() {
     const product: Product = {
       imageUrl: this.form.value.imageUrl ? this.form.value.imageUrl : '',
       name: this.form.value.name ? this.form.value.name : '',
@@ -58,7 +58,7 @@ export class DialogModalComponent {
       product.price > 0 ||
       product.quantity > 0
     ) {
-      this._product.createProduct(product);
+
     }
 
   }

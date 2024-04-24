@@ -6,9 +6,16 @@
           "softpymesas"
         ]
       }
+    },
+    "softpymes-d8234": {
+      "hosting": {
+        "softpymes": [
+          "softpymes-d8234"
+        ]
+      }
     }
   },
   "projects": {
-    "default": "softpymesas"
+    "default": "softpymes-d8234"
   }
 }

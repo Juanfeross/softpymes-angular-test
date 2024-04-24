@@ -42,16 +42,4 @@ export default class ProductsComponent {
   openDialog() {
     this.dialog.open(DialogModalComponent);
   }
-
-  createProduct() {
-    const product: Product = {
-      imageUrl: 'https://cdn.discordapp.com/attachments/852773716580761630/1232704272114651216/Zapato_AU_006_Mocasin_Cuero.webp?ex=662a6cd1&is=66291b51&hm=c10cc836082eb1749f688c2e6ccd319fa7417e96b2637b15da7ab49221f3526c&',
-      name: 'Mouse',
-      price: 3000,
-      description: 'es un mouse inalambrico',
-      quantity: 1
-    }
-    console.log(product)
-    this._product.createProduct(product);
-  }
 }
