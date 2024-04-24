@@ -1,0 +1,9 @@
+<div class="card">
+  <img class="card-image" src="{{ product?.imageUrl }}" alt="" />
+  <div class="card-info">
+    <p>{{ product?.name }}</p>
+    <p>{{ product?.description }}</p>
+    <p>{{ product?.quantity }} disponibles</p>
+    <p>{{ product?.price | currency : "$" }}</p>
+  </div>
+</div>

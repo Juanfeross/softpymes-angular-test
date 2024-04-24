@@ -1,0 +1,10 @@
+@import './../../../../../../assets/scss/styles.scss';
+
+.view-container {
+  max-width: 100%;
+  min-height: calc(100vh - 5rem - 5rem);
+  background-color: $white-1;
+  display: flex;
+  justify-content: center;
+  padding: 0rem 0px 4rem 0px;
+}

@@ -1,0 +1,13 @@
+<div class="view">
+  <div class="product-header">
+    <h2>Productos</h2>
+    <button mat-flat-button color="accent" (click)="openDialog()">
+      Crear Producto Nuevo +
+    </button>
+  </div>
+  <div class="view-products">
+    @for (product of products(); track $index) {
+    <app-product-card [product]="product"></app-product-card>
+    }
+  </div>
+</div>

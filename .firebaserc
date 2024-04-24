@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "softpymesas": {
+      "hosting": {
+        "softpymes": [
+          "softpymesas"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "softpymesas"
+  }
+}

@@ -1,0 +1,26 @@
+@import './../../../../../assets/scss/styles.scss';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 600px;
+  gap: 2rem;
+  background-color: $white;
+  padding: 3rem;
+  border-radius: .5rem;
+  box-shadow: 0px 5px 10px 1px $grey-3;
+  mat-form-field {
+    width: 100%;
+  }
+  .mat-field__numbers {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.mat-accent {
+  background-color: $blue-1;
+  color: $white;
+  box-shadow: 0px 2px 5px 1px $grey-3;
+}

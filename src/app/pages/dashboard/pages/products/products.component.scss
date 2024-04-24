@@ -1,0 +1,37 @@
+@import './../../../../../assets/scss/styles.scss';
+
+.view {
+  top: -10rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  gap: 2rem;
+  background-color: $white;
+  padding: 3rem;
+  border-radius: .5rem;
+  box-shadow: 0px 5px 10px 1px $grey-3;
+}
+
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h2 {
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0px;
+  }
+}
+
+.mat-accent {
+  background-color: $blue-1;
+  color: $white;
+  box-shadow: 0px 2px 5px 1px $grey-3;
+}
+
+.view-products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}

@@ -1,0 +1,11 @@
+{
+  "hosting": [
+    {
+      "target": "softpymes",
+      "source": ".",
+      "frameworksBackend": {
+        "region": "us-east1"
+      }
+    }
+  ]
+}
